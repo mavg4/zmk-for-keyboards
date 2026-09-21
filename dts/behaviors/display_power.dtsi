@@ -1,3 +1,6 @@
+// Shares &ext_power's EP_ON / EP_OFF / EP_TOG parameter values.
+#include <dt-bindings/zmk/ext_power.h>
+
 / {
     behaviors {
         // Invoked on peripherals too, so the node name must stay <= 8 characters.
