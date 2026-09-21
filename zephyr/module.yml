@@ -1,0 +1,6 @@
+name: sofle-display-power
+build:
+  cmake: .
+  kconfig: Kconfig
+  settings:
+    dts_root: .

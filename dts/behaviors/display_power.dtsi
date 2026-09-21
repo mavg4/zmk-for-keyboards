@@ -1,0 +1,10 @@
+/ {
+    behaviors {
+        // Invoked on peripherals too, so the node name must stay <= 8 characters.
+        disp_pwr: dsppower {
+            compatible = "zmk,behavior-display-power";
+            #binding-cells = <1>;
+            display-name = "Display Power";
+        };
+    };
+};

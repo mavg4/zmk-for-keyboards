@@ -1,0 +1,7 @@
+# External power control that re-initializes the display when power returns.
+
+description: Display-aware external power control behavior
+
+compatible: "zmk,behavior-display-power"
+
+include: one_param.yaml

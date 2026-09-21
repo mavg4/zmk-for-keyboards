@@ -1,0 +1,18 @@
+DT_COMPAT_ZMK_BEHAVIOR_DISPLAY_POWER := zmk,behavior-display-power
+
+config ZMK_BEHAVIOR_DISPLAY_POWER
+    bool
+    default $(dt_compat_enabled,$(DT_COMPAT_ZMK_BEHAVIOR_DISPLAY_POWER))
+    depends on ZMK_DISPLAY && ZMK_EXT_POWER && PM_DEVICE
+
+if ZMK_BEHAVIOR_DISPLAY_POWER
+
+config ZMK_BEHAVIOR_DISPLAY_POWER_RAIL_SETTLE_MS
+    int "Milliseconds to wait after enabling the rail before touching the bus"
+    default 50
+
+config ZMK_BEHAVIOR_DISPLAY_POWER_BUS_RESET_MS
+    int "Milliseconds to wait around the I2C controller teardown/re-init"
+    default 30
+
+endif
